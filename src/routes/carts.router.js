@@ -1,8 +1,8 @@
 const { Router } = require('express')
-const ProductManager = require('../ClasesProduct/cartManager')
+const CartManager = require('../ClasesProduct/cartsManager')
 
 const CartRouter = Router()
-const Carts = new CartManager
+const Carts = new CartManager ()
 
 CartRouter.post("/", async(req, res)=>{
     res.send(await Carts.addCarts())
